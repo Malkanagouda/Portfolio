@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malkanagouda Patil</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgZmlsbD0iIzRmZDFkOSIgcj0iMzAiLz48cGF0aCBkPSJtMjAuNCAxNy4xaDYuMnYxNy44YzAgMiAuMiAzLjQuNyA0LjQuNyAxLjYgMi4zIDIuNCA0LjggMi40IDIuNCAwIDQtLjggNC44LTIuNC41LS45LjctMi40LjctNC40di0xNy44aDYuMnYxNy45YzAgMy4xLS41IDUuNS0xLjQgNy4yLTEuOCAzLjEtNS4yIDQuNy0xMC4yIDQuN3MtOC40LTEuNi0xMC4yLTQuN2MtMS0xLjctMS40LTQuMS0xLjQtNy4yeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="
+        type="image/png"> <!-- Replace with your logo path -->
+
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Text typing animation */
+        .typing {
+            border-right: 2px solid yellow;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 2s steps(10, end) forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <!-- Header with Navigation Tabs -->
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-500">Malkanagouda Patil</h1>
+            <!-- Hamburger Icon for Mobile View -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#about" class="text-gray-300 hover:text-yellow-500 transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-yellow-500 transition">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-yellow-500 transition">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-yellow-500 transition">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-yellow-500 transition">Contact</a>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-800 text-gray-300 hidden">
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-700 transition">About</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-gray-700 transition">Skills</a>
+            <a href="#experience" class="block px-4 py-2 hover:bg-gray-700 transition">Experience</a>
+            <a href="#projects" class="block px-4 py-2 hover:bg-gray-700 transition">Projects</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-700 transition">Contact</a>
+        </div>
+    </header>
+
+
+
+
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar with Contact Info -->
+        <!-- Sidebar with Contact Info -->
+        <aside class="w-full md:w-64 bg-gray-800 min-h-screen p-6">
+            <div class="text-center mb-8">
+                <img src="assets/imgs/mp.jpg"
+                    alt="Profile Picture" class="rounded-full mx-auto mb-4 w-32 h-32">
+                <h2 class="text-xl font-semibold">I'm a <span id="role" class="text-yellow-500"></span></h2>
+            </div>
+            <div class="flex justify-center space-x-4 text-yellow-500 mb-4">
+                <p class="flex items-center">
+                    <a href="mailto:mgpatil1107@gmail.com" class="flex items-center hover:text-white">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </p>
+                <p class="flex items-center">
+                    <a href="tel:+917406867143" class="flex items-center hover:text-white">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/Malkanagouda" class="flex items-center hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/mvrp7143/"
+                        class="flex items-center hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://Malkanagouda.github.io/portfolio/" class="flex items-center hover:text-white">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/malkupatil/" class="flex items-center hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </p>
+            </div>
+
+            <!-- <div class="text-gray-400 text-center">
+        <p>udaykumargjewoor@gmail.com</p>
+        <p>+91 7259931948</p>
+    </div> -->
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-8">
+            <!-- About Section -->
+            <section id="about" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">About Me</h2>
+                <p class="text-gray-300">
+                    I am passionate about Data Analysis and exploring the vast world of Data Science. With expertise in data manipulation, visualization, and drawing actionable insights, I strive to make complex data more accessible and valuable. I am constantly exploring new tools and techniques to improve my analytical skills and am eager to delve deeper into the field of Data Science. Open to collaborations and excited to work on projects that push boundaries, drive decisions, and foster innovation.
+                </p>
+
+                <div class="mt-6 flex space-x-4">
+                    <a href="mailto:mgpatil1107@gmail.com"
+                        class="inline-block px-6 py-2 text-white bg-yellow-500 hover:bg-yellow-600 rounded transition duration-300">
+                        Hire Me
+                    </a>
+                    <a href="https://docs.google.com/document/d/1qM4g_FiSBlFwdk063O9-LFiqKa8inDs0/edit?usp=sharing&ouid=113414475096729875574&rtpof=true&sd=true"
+                        target="_blank"
+                        class="inline-block px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded transition duration-300">
+                        Resume
+                    </a>
+                </div>
+            </section>
+
+            <!-- Profile Summary Section -->
+            <section id="profile" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Profile Summary</h2>
+                <ul class="list-disc ml-6 text-gray-300">
+                    <li>A self-motivated and detail-oriented professional with strong problem-solving and analytical skills, aspiring to build a robust career in the Data Analytics and Data Engineering domain.</li><br>
+                    <li>Proficient in Python, SQL, Power BI, and equipped with a solid understanding of statistical concepts to derive meaningful insights and drive data-driven decisions. Skilled in data pre-processing, exploratory data analysis (EDA), and data visualization, with experience in applying these techniques to support machine learning models and business outcomes.</li><br>
+                    <li>Have a foundational understanding of ETL processes, data pipelines, and database management systems, with a growing interest in learning and developing hands-on expertise in cloud platforms and big data tools like PySpark, Azure, and AWS.</li><br>
+                    <li>An effective individual contributor and team collaborator with a strong focus on delivering actionable insights, streamlining data workflows, and contributing to organizational growth. Open to learning and adapting to new tools and technologies in a dynamic environment.</li><br>
+                    <li>Actively seeking an opportunity to leverage my skill set in a challenging role where I can contribute to impactful projects, support business goals, and grow alongside a reputed organization.</li>
+                </ul>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Technical Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Python</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-database text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">SQL</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-microsoft text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Power BI</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-accusoft text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Spark</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-hdd text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">HDFS</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-arrow-right text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Data Ingestion</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-cogs text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Data Processing</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-chart-line text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Data Visualization</span>
+                    </div>
+                    
+                    <!-- Additional Tools -->
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-cloud text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Hadoop</span>
+                    </div>                    
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-aws text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">AWS</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fab fa-docker text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Docker</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg transition hover:scale-105">
+                        <i class="fas fa-project-diagram text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-gray-300">Data Modeling</span>
+                    </div>
+                    
+                </div>
+            </section>
+        </section>
+
+        <!-- Skills Section -->
+        <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+            <ul class="text-gray-400 list-disc ml-5">
+                <li>Languages: Python, Pyspark, SQL, C, Dax</li>
+                <li>DA Packages: Pandas, Numpy, Matplotlib, Seaborn, Plotly, Scikit-learn, PySpark, SQLAlchemy</li>
+                <li>Big Data Tools: Apache Spark, Apache Hadoop, Apache Hive, Apache Airflow, Apache Nifi, Airbyte, MySQL, Power BI, Tableau</li>
+                <li>Data Solution: Data orchestration, Ingestion, DataLake, Data warehouse, Data catalogue, Data quality management, Data governance
+
+                    <br>
+                </li>
+
+
+            </ul>
+
+        </div>
+        </section>
+
+
+            <!-- Experience Section -->
+            <section id="experience" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Experience</h2>
+    
+                <!-- Data Engineering Experience -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Data Engineering</h3>
+                    <p class="text-gray-400">Analogica Software Devpt Pvt Ltd, Bengaluru</p>
+                    <p class="text-gray-400">Feb 2024 – Present</p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Architected and developed Certisured Reporting and dashboards framework addressing students' enrollment, engagement, and ROI insights.</li>
+                        <li>Built Predictive Marketing Attribution regression model identifying the digital channel with the highest ROI, which increased ROI effectively by 80%.</li>
+                    </ul>
+                </div>
+    
+                <!-- Data Analyst Experience -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Data Analyst</h3>
+                    <p class="text-gray-400">Analogica Software Devpt Pvt Ltd, Bengaluru</p>
+                    <p class="text-gray-400">Oct 2022 – Jan 2024</p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Designed and implemented Ship Refitting Status Dashboards for Naval War College, Developed Real-Time Reporting Solution to Track Ship Refitting Progress and Operational Efficiency.</li>
+                        <li>Conducted Exploratory Data Analysis (EDA) to extract key insights from defense manufacturing data, enabling machine learning teams to improve feature engineering and model development for optimized production processes.</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <!-- Certifications Section -->
+            <section id="certifications" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Certifications</h2>
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <ul class="text-gray-400 list-disc ml-5">
+                        <li>Full Stack Data Analysis with Power BI, SQL, Excel, Tableau, Python And Statistics at Certisured</li>
+                        <li>Machine Learning Foundation with Python Libraries at Ineuron</li>
+                        <li>Data Analytics Bootcamp 3.0 at Codebasics</li>
+                        <li>Product Design Engineer at KGTTI</li>
+                        <li>Workshop on Data Visualization With Power BI & Tableau at DSATM</li>
+                    </ul>
+                </div>
+            </section>
+             
+            <!-- Projects Section -->
+            <section id="projects" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Project Portfolio</h2>
+    
+                <!-- Certisured Reporting Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Certisured Reporting and Dashboards Framework</h3>
+                    <p class="text-gray-400">
+                        A comprehensive reporting and analytics platform designed to automate the collection, transformation, and visualization of student data. The solution pulls data from various sources, processes it through an efficient batch ETL pipeline, and stores it in a well-organized data repository. With a focus on delivering valuable insights, the platform offers institutions real-time dashboards and predictive analytics, helping them track enrollment trends, student engagement, and ROI.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Architecture design, Data pipeline development, Data integration and transformation, Database management and optimization</li>
+                        <li>Report and dashboard development, Predictive model creation and analysis, Data validation and preprocessing</li>
+                        <li>Automation of data refresh and system monitoring, Collaboration with stakeholders for reporting needs, Continuous improvement of reporting framework</li>
+                    </ul>
+                </div>
+    
+                <!-- Predictive Marketing Attribution Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Predictive Marketing Attribution Regression Model</h3>
+                    <p class="text-gray-400">
+                        A comprehensive marketing analytics solution developed to optimize digital channel investments by identifying the highest-performing channels. The solution uses advanced regression models to analyze marketing data and attribute ROI to specific digital touchpoints.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Marketing Channel Attribution – Regression analysis to evaluate channel performance</li>
+                        <li>ROI Prediction – Predictive modeling to forecast ROI and optimize budget allocation</li>
+                        <li>Performance Insights – Data-driven recommendations for strategic decision-making based on ROI metrics</li>
+                    </ul>
+                </div>
+
+                <!-- Ship Refitting Dashboard Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Ship Refitting Status Dashboard</h3>
+                    <p class="text-gray-400">
+                        Designed and implemented a Ship Refitting Status Dashboard for the Naval War College to track the progress of ship refitting projects. The dashboard provides real-time insights into task status, timeline, and resource allocation, improving decision-making and operational efficiency for defense operations.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Real-time data integration from multiple sources</li>
+                        <li>Progress tracking and timeline analysis for multiple ship refitting projects</li>
+                        <li>Key performance indicators (KPIs) for task completion, issues resolved, and resource usage</li>
+                        <li>Improved project oversight and operational transparency</li>
+                    </ul>
+                </div>
+
+                <!-- EDA for Defense Manufacturing Project -->
+                <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg mb-4 transition hover:scale-105">
+                    <h3 class="text-xl font-semibold text-white">Exploratory Data Analysis (EDA) for Defense Manufacturing</h3>
+                    <p class="text-gray-400">
+                        Conducted Exploratory Data Analysis (EDA) to extract valuable insights from defense manufacturing data. The analysis focused on identifying inefficiencies in production processes and uncovering patterns in equipment usage and worker productivity, providing a foundation for machine learning models aimed at improving operational efficiency.
+                    </p>
+                    <ul class="text-gray-400 list-disc ml-5 mt-2">
+                        <li>Exploration and cleaning of complex defense manufacturing datasets</li>
+                        <li>Identification of key drivers influencing production efficiency</li>
+                        <li>Uncovering hidden patterns and trends for informed decision-making</li>
+                        <li>Provided actionable insights to enhance machine learning feature engineering and predictive modeling</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- Contact Section -->
+            <section id="contact" class="mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-500 mb-4">Contact Me</h2>
+                <form id="contact-form" class="space-y-4">
+                    <input type="text" name="name" placeholder="Your Name"
+                        class="w-full p-2 rounded bg-gray-700 text-white" required>
+                    <input type="email" name="email" placeholder="Your Email"
+                        class="w-full p-2 rounded bg-gray-700 text-white" required>
+                    <textarea name="message" rows="5" placeholder="Your Message"
+                        class="w-full p-2 rounded bg-gray-700 text-white" required></textarea>
+                    <button type="submit"
+                        class="w-full bg-yellow-500 text-black p-2 rounded hover:bg-yellow-400 transition">Send
+                        Message</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center">
+        <p class="text-gray-400">&copy; 2025 Malkanagouda Patil. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("rb40y2LIsUribg2wI"); // Replace with your EmailJS user ID
+        })();
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_ve31f1f', 'template_jaof4je', this)
+                .then(function () {
+                    alert("Message sent successfully!");
+                }, function (error) {
+                    alert("Failed to send the message. Please try again.");
+                    console.log('EmailJS error:', error);
+                });
+        });
+
+        // Text Animation for Role
+        const roles = ["Data Analyst", "Researcher", "Data Engineer", "Data Scientist"];
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        const roleElement = document.getElementById("role");
+
+        function type() {
+            if (currentCharIndex < roles[currentRoleIndex].length) {
+                roleElement.textContent += roles[currentRoleIndex].charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(type, 100); // Speed of typing
+            } else {
+                setTimeout(deleteRole, 1000); // Pause before deleting
+            }
+        }
+
+        function deleteRole() {
+            if (currentCharIndex > 0) {
+                roleElement.textContent = roleElement.textContent.slice(0, -1);
+                currentCharIndex--;
+                setTimeout(deleteRole, 50); // Speed of deleting
+            } else {
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                setTimeout(type, 500); // Pause before typing next role
+            }
+        }
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // Start the typing animation
+        document.addEventListener("DOMContentLoaded", type);
+
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
